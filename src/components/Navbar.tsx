@@ -51,7 +51,9 @@ const Navbar = () => {
         </div>
         
         <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:items-center md:w-auto mt-4 md:mt-0 space-y-2 md:space-y-0 space-x-0 md:space-x-4`}>
-          <ThemeToggle className="hidden md:flex" />
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
           <Link to="/" className="block">
             <Button className="w-full md:w-auto px-4 py-2 text-base">Join Waitlist</Button>
           </Link>

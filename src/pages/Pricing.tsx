@@ -51,13 +51,13 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
       
-      <div className="py-20 px-6 md:px-12 lg:px-24 bg-blue-gradient">
+      <div className="py-20 px-6 md:px-12 lg:px-24 bg-blue-gradient dark:bg-gray-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Pricing</h1>
-          <p className="text-lg text-gray-700 mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Pricing</h1>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             Flexible plans designed to scale with your AI orchestration needs.
           </p>
         </div>
@@ -70,7 +70,11 @@ const Pricing = () => {
               <div 
                 key={index} 
                 className={`p-8 rounded-xl shadow-md border opacity-0 animate-fade-in ${
-                  plan.recommended ? 'border-blue-500 relative' : 'border-gray-200'
+                  plan.recommended 
+                    ? 'border-blue-500 relative' 
+                    : 'border-gray-200 dark:border-gray-700'
+                } ${
+                  index === 2 ? 'dark:bg-gray-800' : 'bg-white dark:bg-gray-900'
                 }`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -79,18 +83,18 @@ const Pricing = () => {
                     Recommended
                   </div>
                 )}
-                <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
-                <p className="text-xl mb-6">{plan.price}</p>
+                <h3 className="text-2xl font-bold mb-4 dark:text-white">{plan.name}</h3>
+                <p className="text-xl mb-6 dark:text-gray-300">{plan.price}</p>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center">
                       <Check className="h-5 w-5 text-green-500 mr-2" />
-                      <span>{feature}</span>
+                      <span className="dark:text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link to="/" className="block w-full">
-                  <Button className="w-full bg-black text-white hover:bg-gray-800">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 dark:bg-blue-600 dark:hover:bg-blue-700">
                     Join waitlist <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

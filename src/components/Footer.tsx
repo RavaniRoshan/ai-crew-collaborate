@@ -18,29 +18,29 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-3">Product</h4>
               <ul className="space-y-2">
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Features</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Use Cases</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Pricing</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Roadmap</Link></li>
+                <li><Link to="/features" className="text-gray-600 hover:text-gray-900">Features</Link></li>
+                <li><Link to="/use-cases" className="text-gray-600 hover:text-gray-900">Use Cases</Link></li>
+                <li><Link to="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link></li>
+                <li><Link to="/roadmap" className="text-gray-600 hover:text-gray-900">Roadmap</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-3">Company</h4>
               <ul className="space-y-2">
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">About</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Blog</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Careers</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Contact</Link></li>
+                <li><Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link></li>
+                <li><Link to="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link></li>
+                <li><Link to="/careers" className="text-gray-600 hover:text-gray-900">Careers</Link></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-3">Legal</h4>
               <ul className="space-y-2">
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Privacy</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Terms</Link></li>
-                <li><Link to="/" className="text-gray-600 hover:text-gray-900">Security</Link></li>
+                <li><Link to="/privacy" className="text-gray-600 hover:text-gray-900">Privacy</Link></li>
+                <li><Link to="/terms" className="text-gray-600 hover:text-gray-900">Terms</Link></li>
+                <li><Link to="/security" className="text-gray-600 hover:text-gray-900">Security</Link></li>
               </ul>
             </div>
           </div>

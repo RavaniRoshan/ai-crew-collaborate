@@ -11,7 +11,7 @@ const PricingSection = () => {
             Start for free.<br />
             Get used to winning.
           </h2>
-          <p className="text-gray-700 mt-4 text-lg">
+          <p className="text-gray-700 dark:text-gray-300 mt-4 text-lg">
             Whether you're managing AI agents for development, research,
             content creation, or just exploring, join our waitlist today.
           </p>
@@ -20,9 +20,9 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="waitlist-card opacity-0 animate-fade-in">
             <h3 className="text-2xl font-bold">Free</h3>
-            <div className="text-3xl font-bold my-2">$0<span className="text-gray-500 text-lg font-normal">/mo</span></div>
+            <div className="text-3xl font-bold my-2">$0<span className="text-gray-500 dark:text-gray-400 text-lg font-normal">/mo</span></div>
             
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Get a taste of how CrewHub works with limited features and agents.
             </p>
             
@@ -31,24 +31,28 @@ const PricingSection = () => {
           
           <div className="waitlist-card opacity-0 animate-fade-in animate-delay-200">
             <h3 className="text-2xl font-bold">Pro</h3>
-            <div className="text-3xl font-bold my-2">$29<span className="text-gray-500 text-lg font-normal">/mo</span></div>
+            <div className="text-3xl font-bold my-2">
+              <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100 text-sm py-1 px-2 rounded-full">Coming Soon</span>
+            </div>
             
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Unlimited access to CrewHub. Use all agents, create custom workflows, and collaborate with your team.
             </p>
             
             <Button className="waitlist-btn w-full">Join Waitlist</Button>
           </div>
           
-          <div className="waitlist-card bg-crew-darkBlue text-white opacity-0 animate-fade-in animate-delay-400">
+          <div className="waitlist-card bg-crew-darkBlue text-white opacity-0 animate-fade-in animate-delay-400 dark:bg-gray-800">
             <h3 className="text-2xl font-bold">Enterprise</h3>
-            <div className="text-3xl font-bold my-2">Custom</div>
+            <div className="text-3xl font-bold my-2">
+              <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-sm py-1 px-2 rounded-full">Coming Soon</span>
+            </div>
             
             <p className="text-gray-200 mb-8">
               Specifically made for teams who need full customization, dedicated support, and advanced security.
             </p>
             
-            <Button variant="outline" className="w-full bg-transparent border-white text-white hover:bg-white hover:text-crew-darkBlue">
+            <Button variant="outline" className="w-full bg-transparent border-white text-white hover:bg-white hover:text-crew-darkBlue dark:hover:bg-gray-700">
               Contact Sales
             </Button>
           </div>

@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from 'react-router-dom';
 
 const WaitlistForm = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,11 +19,8 @@ const WaitlistForm = () => {
     // Simulate API call
     setTimeout(() => {
       setLoading(false);
-      toast({
-        title: "Success!",
-        description: "You've been added to our waitlist. We'll notify you when CrewHub is ready!",
-      });
-      setEmail('');
+      // Navigate to thank you page with email as state
+      navigate('/thank-you', { state: { email } });
     }, 1000);
   };
 

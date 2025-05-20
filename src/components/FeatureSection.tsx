@@ -16,7 +16,7 @@ const FeatureSection = () => {
   return (
     <section className="py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center fade-in">
           <span className="text-blue-600 dark:text-blue-400 font-medium uppercase tracking-wider text-sm">THE TURNING POINT OF AI MANAGEMENT</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 dark:text-white">
             CrewHub orchestrates<br />
@@ -24,9 +24,9 @@ const FeatureSection = () => {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 stagger-container">
           {features.map((feature, index) => (
-            <div key={index} className="opacity-0 animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+            <div key={index} className={`stagger-item hover-scale ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}`}>
               <div className="border-l-4 border-blue-500 pl-4 mb-4">
                 <h3 className="text-xl font-bold dark:text-white">{feature.title}</h3>
               </div>

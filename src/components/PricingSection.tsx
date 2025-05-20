@@ -6,8 +6,8 @@ const PricingSection = () => {
   return (
     <section className="py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold">
+        <div className="mb-12 text-center fade-in">
+          <h2 className="text-3xl md:text-5xl font-bold dark:text-white">
             Start for free.<br />
             Get used to winning.
           </h2>
@@ -17,10 +17,10 @@ const PricingSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="waitlist-card opacity-0 animate-fade-in">
-            <h3 className="text-2xl font-bold">Free</h3>
-            <div className="text-3xl font-bold my-2">$0<span className="text-gray-500 dark:text-gray-400 text-lg font-normal">/mo</span></div>
+        <div className="grid md:grid-cols-3 gap-8 stagger-container">
+          <div className="waitlist-card hover-scale stagger-item">
+            <h3 className="text-2xl font-bold dark:text-white">Free</h3>
+            <div className="text-3xl font-bold my-2 dark:text-white">$0<span className="text-gray-500 dark:text-gray-400 text-lg font-normal">/mo</span></div>
             
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Get a taste of how CrewHub works with limited features and agents.
@@ -29,8 +29,8 @@ const PricingSection = () => {
             <Button className="waitlist-btn w-full">Join Waitlist</Button>
           </div>
           
-          <div className="waitlist-card opacity-0 animate-fade-in animate-delay-200">
-            <h3 className="text-2xl font-bold">Pro</h3>
+          <div className="waitlist-card hover-scale stagger-item">
+            <h3 className="text-2xl font-bold dark:text-white">Pro</h3>
             <div className="text-3xl font-bold my-2">
               <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100 text-sm py-1 px-2 rounded-full">Coming Soon</span>
             </div>
@@ -42,7 +42,7 @@ const PricingSection = () => {
             <Button className="waitlist-btn w-full">Join Waitlist</Button>
           </div>
           
-          <div className="waitlist-card bg-crew-darkBlue text-white opacity-0 animate-fade-in animate-delay-400 dark:bg-gray-800">
+          <div className="waitlist-card bg-crew-darkBlue text-white hover-scale stagger-item dark:bg-gray-800">
             <h3 className="text-2xl font-bold">Enterprise</h3>
             <div className="text-3xl font-bold my-2">
               <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-sm py-1 px-2 rounded-full">Coming Soon</span>

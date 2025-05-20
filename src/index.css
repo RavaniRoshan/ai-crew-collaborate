@@ -5,26 +5,26 @@
 
 @layer base {
   :root {
-    --background: 220 33% 97%;
+    --background: 0 0% 100%;
     --foreground: 222 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 84% 4.9%;
 
     --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 222 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent-foreground: 222 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -56,7 +56,7 @@
     --popover-foreground: 210 40% 98%;
 
     --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 222 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -104,26 +104,27 @@
 }
 
 .waitlist-card {
-  @apply bg-white dark:bg-gray-900 rounded-xl shadow-md p-6 border border-gray-100 dark:border-gray-800;
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-100 dark:border-gray-700;
 }
 
-.animate-delay-100 {
+/* Animation delay utilities */
+.animation-delay-100 {
   animation-delay: 100ms;
 }
 
-.animate-delay-200 {
+.animation-delay-200 {
   animation-delay: 200ms;
 }
 
-.animate-delay-300 {
+.animation-delay-300 {
   animation-delay: 300ms;
 }
 
-.animate-delay-400 {
+.animation-delay-400 {
   animation-delay: 400ms;
 }
 
-/* New animations and transitions */
+/* Animations and transitions */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -180,13 +181,13 @@
   transform: scale(1.05);
 }
 
-.fade-in {
+.fade-in, .fade-in-item {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.visible {
+.fade-in.visible, .fade-in-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -230,4 +231,40 @@
 
 .stagger-item.visible {
   animation: fadeIn 0.5s forwards;
+}
+
+/* New animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg;
+}
+
+/* Custom button effects */
+.btn-hover {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.btn-hover::after {
+  @apply content-[''] absolute top-0 h-full w-0 left-0 bg-white bg-opacity-20 transition-all duration-300;
+}
+
+.btn-hover:hover::after {
+  @apply w-full;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  @apply bg-white/10 dark:bg-gray-800/30 backdrop-blur-lg border border-white/20 dark:border-gray-700/50;
 }

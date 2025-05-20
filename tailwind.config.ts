@@ -67,6 +67,32 @@ export default {
 					blue: '#D9E6FF',
 					darkBlue: '#2B3A67',
 					black: '#121212'
+				},
+				gray: {
+					50: '#F9FAFB',
+					100: '#F3F4F6',
+					200: '#E5E7EB',
+					300: '#D1D5DB',
+					400: '#9CA3AF',
+					500: '#6B7280',
+					600: '#4B5563',
+					700: '#374151',
+					800: '#1F2937',
+					900: '#111827',
+				},
+				dark: {
+					bg: '#0D1117',
+					card: '#161B22',
+					accent: '#1F2937',
+					highlight: '#10B981',
+					text: '#8B949E',
+				},
+				light: {
+					bg: '#FFFFFF',
+					card: '#F3F4F6',
+					accent: '#E5E7EB',
+					highlight: '#3B82F6',
+					highlight2: '#22C55E',
 				}
 			},
 			borderRadius: {
@@ -150,10 +176,16 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'blue-gradient': 'linear-gradient(135deg, #E1EBFF 0%, #A0BDFF 100%)',
+				'dark-gradient': 'linear-gradient(135deg, #161B22 0%, #0D1117 100%)',
 			},
 			transitionProperty: {
 				'height': 'height',
 				'spacing': 'margin, padding',
+			},
+			boxShadow: {
+				'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+				'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+				'dark-card': '0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12)',
 			}
 		}
 	},

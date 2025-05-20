@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AIFeatureBox from "@/components/AIFeatureBox";
+import { Card } from "@/components/ui/card";
 
 const Features = () => {
   const features = [
@@ -32,14 +33,38 @@ const Features = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll('.fade-in-item');
+      elements.forEach((element) => {
+        const position = element.getBoundingClientRect();
+        
+        // If element is in viewport
+        if (position.top < window.innerHeight - 100) {
+          element.classList.add('visible');
+        }
+      });
+    };
+    
+    // Initial check on load
+    handleScroll();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#0D1117]">
       <Navbar />
       
-      <div className="py-20 px-6 md:px-12 lg:px-24 bg-blue-gradient">
+      <div className="py-20 px-6 md:px-12 lg:px-24 bg-blue-gradient dark:bg-gradient-to-br dark:from-[#161B22] dark:to-[#1F2937]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Features</h1>
-          <p className="text-lg text-gray-700 mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white animate-fade-in">Features</h1>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 animate-fade-in animation-delay-200">
             Discover the powerful capabilities that make CrewHub the ultimate platform for AI agent orchestration.
           </p>
         </div>
@@ -56,6 +81,24 @@ const Features = () => {
                 index={index}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-[#161B22]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white fade-in-item">Why Choose CrewHub?</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 fade-in-item">
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Seamless Integration</h3>
+              <p className="text-gray-600 dark:text-gray-300">Connect your favorite AI models and tools with just a few clicks, without any coding required.</p>
+            </Card>
+            
+            <Card className="p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 fade-in-item">
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Enterprise-Grade Security</h3>
+              <p className="text-gray-600 dark:text-gray-300">Your data and AI workflows are protected with industry-leading security measures and compliance standards.</p>
+            </Card>
           </div>
         </div>
       </section>

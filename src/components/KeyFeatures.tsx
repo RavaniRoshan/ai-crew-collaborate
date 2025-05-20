@@ -25,8 +25,8 @@ const KeyFeatures = () => {
     <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900/30">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold dark:text-white">Key Features</h2>
-          <p className="text-gray-700 dark:text-gray-300 mt-4">Everything you need to manage AI agents efficiently</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Key Features</h2>
+          <p className="text-gray-700 dark:text-gray-200 mt-4">Everything you need to manage AI agents efficiently</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
@@ -36,8 +36,8 @@ const KeyFeatures = () => {
               className="waitlist-card hover-scale stagger-item"
               style={{transitionDelay: `${index * 50}ms`}}
             >
-              <h3 className="text-xl font-bold mb-3 dark:text-white">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>

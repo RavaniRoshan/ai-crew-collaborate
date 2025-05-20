@@ -32,11 +32,11 @@ const WaitlistForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="flex-grow waitlist-input bg-white"
+        className="flex-grow waitlist-input bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
       />
       <Button type="submit" disabled={loading} className="waitlist-btn">
-        {loading ? 'Joining...' : 'Join Waitlist'}
-        {!loading && <ArrowRight className="ml-2 h-4 w-4" />}
+        <span className="text-white">{loading ? 'Joining...' : 'Join Waitlist'}</span>
+        {!loading && <ArrowRight className="ml-2 h-4 w-4 text-white" />}
       </Button>
     </form>
   );

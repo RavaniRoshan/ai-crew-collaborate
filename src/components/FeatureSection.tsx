@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import AIFeatureBox from './AIFeatureBox';
 
 const features = [
   {
